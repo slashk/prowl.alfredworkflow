@@ -75,27 +75,15 @@
 				<integer>6</integer>
 				<key>script</key>
 				<string>try:
-	import keyutils as utils
+	import prowl_alfred as prowl
 except:
 	print "Library error. Please report to Author."
 
-import requests
-
-prowl_url = "http://api.prowlapp.com/publicapi/add"
-query = "{query}"
-application = "Alfred"
-event = "Message"
 try:
-	apikey = utils.get_config('apikey')
-except:
-	print "No APIKEY. Please configure by holding down the cmd key."
-parameters = {'apikey': apikey, 'event': event, 'application': application, 'priority': 0, 'description': query}
-
-r = requests.post(prowl_url, params=parameters)
-if not r.ok:
+    prowl.send_prowl({query})
+    print "Prowl sent!"
+except EXCEPTION:
 	print ("Bad APIKEY: %s" % apikey)
-else:
-	print "Prowl sent!"
 </string>
 				<key>type</key>
 				<integer>3</integer>
@@ -138,12 +126,11 @@ else:
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>import keyutils as utils
-import requests
+				<string>import prowl_alfred as prowl
 
 apikey = "{query}"
 try:
-	utils.save_key(apikey)
+	prowl.save_api_key(apikey)
 except:
 	print "Error saving key."</string>
 				<key>type</key>
