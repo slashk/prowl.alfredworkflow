@@ -5,6 +5,11 @@ This [Alfred 2 workflow](http://www.alfredapp.com/) allow you to send [Prowl](ht
 
 For information on how to install and use this workflow, please visit the [Prowl for Alfred](http://ken.pepple.info/prowl.alfredworkflow) homepage.
 
+License
+-------
+
+This workflow is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
+
 Requirements
 ------------
 
@@ -38,6 +43,11 @@ apikey = b59991d2e56cfd64216153da47355283db4999fc
 ```
 
 This shouldn't be set by hand - rather the cmd modifier option will set it for you.
+
+Build Script
+------------
+
+The `make_workflow.sh` bash shell script builds the workflow by zip'ing the appropriate files.
 
 Alleyoop Support
 ----------------
