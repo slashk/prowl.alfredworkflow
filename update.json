@@ -1,4 +1,5 @@
 {
   "version": 0.1,
-  "remote_json": ""
+  "remote_json":
+  "https://raw.github.com/slashk/prowl.alfredworkflow/master/remote.json"
 }
