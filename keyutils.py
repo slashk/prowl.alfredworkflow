@@ -28,10 +28,10 @@ def get_config(config_key, section="defaults", config_file="config.ini"):
     config.read(get_config_path(config_file))
     return config.get(section, config_key)
 
-def save_config(apikey):
+def save_config(config_key, config_value, config_file="config.ini"):
     config = ConfigParser.RawConfigParser()
     config.add_section('defaults')
-    config.set('defaults', 'apikey', apikey)
-    with open(get_config_path("config.ini"), 'wb') as configfile:
+    config.set('defaults', config_key, config_value)
+    with open(get_config_path(config_file), 'wb') as configfile:
         config.write(configfile)
 
