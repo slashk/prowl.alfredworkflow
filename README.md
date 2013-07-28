@@ -1,22 +1,18 @@
-Alfred 2 Workflow for Prowl
-====================
+#Alfred 2 Workflow for Prowl
 
 This [Alfred 2 workflow](http://www.alfredapp.com/) allow you to send [Prowl](http://www.prowlapp.com/) alerts to your mobile phone. 
 
 For information on how to install and use this workflow, please visit the [Prowl for Alfred](http://ken.pepple.info/prowl.alfredworkflow) homepage.
 
-License
--------
+##License
 
 This workflow is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html).
 
-Requirements
-------------
+##Requirements
 
 This workflow requires [Alfred 2 and the Powerpack](http://www.alfredapp.com/powerpack/) plus [Prowl](http://www.prowlapp.com/).
 
-Code Structure
---------------
+##Code Structure
 
 There are three important code files:
 
@@ -28,8 +24,7 @@ This workflow uses the [Python Requests](http://docs.python-requests.org/en/late
 
 The Prowl API is defined at [http://www.prowlapp.com/api.php](http://www.prowlapp.com/api.php).
 
-Configuration Files
--------------------
+##Configuration Files
 
 There is a single configuration file:
 
@@ -44,13 +39,11 @@ apikey = b59991d2e56cfd64216153da47355283db4999fc
 
 This shouldn't be set by hand - rather the cmd modifier option will set it for you.
 
-Build Script
-------------
+##Build Script
 
 The `make_workflow.sh` bash shell script builds the workflow by zip'ing the appropriate files.
 
-Alleyoop Support
-----------------
+##Alleyoop Support
 
 This workflow supports [Alleyoop](http://alfred.daniel.sh/oopdev.html) through its `remote.json` and `update.json` files. 
 
