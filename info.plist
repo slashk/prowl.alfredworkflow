@@ -71,33 +71,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>6</integer>
-				<key>script</key>
-				<string>try:
-	import prowl_alfred as prowl
-except:
-	print "Library error. Please report to Author."
-
-try:
-    prowl.send_prowl({query})
-    print "Prowl sent!"
-except EXCEPTION:
-	print ("Bad APIKEY: %s" % apikey)
-</string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -117,6 +90,32 @@ except EXCEPTION:
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>A70A4E1E-712E-4575-967A-0AA64960904D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>6</integer>
+				<key>script</key>
+				<string>import prowl_alfred as prowl
+
+description = "{query}"
+
+try:
+    prowl.send_prowl(description)
+    print "Prowl sent!"
+except:
+	print ("Bad APIKEY: %s" % apikey)
+</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FF316160-82F1-4AC1-8D82-72A1F0AC9ED6</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -145,7 +144,9 @@ except:
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>For details on configuring and using this workflow, go to http://ken.pepple.info/prowl.alfredworkflow/
+
+This workflow requires the Alfred 2 Powerpack (http://www.alfredapp.com/powerpack/) and the Prowl application (http://www.prowlapp.com/).</string>
 	<key>uidata</key>
 	<dict>
 		<key>15299C7A-CDEA-4359-8898-446F2892DB7C</key>
@@ -170,6 +171,6 @@ except:
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>http://ken.pepple.info</string>
+	<string>http://ken.pepple.info/prowl.alfredworkflow/</string>
 </dict>
 </plist>
