@@ -1,3 +1,3 @@
 #!/bin/bash
 
-zip prowl.alfredworkflow *.py requests/*.py *.md *.png *.plist *.json 
+zip -r prowl.alfredworkflow *.py requests *.md *.png *.plist *.json -x \*.pyc
