@@ -34,15 +34,22 @@ def get_config_path(config_file=None):
     bundle_id = get_bundle_id()
     this_config_path = os.path.expanduser(os.path.join("~/Library/Application Support/Alfred 2/Workflow Data/", bundle_id))
     if not os.path.exists(this_config_path):
-        os.makedirs(this_config_path)
+        try:
+            os.makedirs(this_config_path)
+        except:
+            raise Exception("Cannot create configuration file")
     if config_file:
         this_config_path = os.path.join(this_config_path, config_file)
     return this_config_path
 
 def get_config(config_key, section="defaults", config_file="config.ini"):
     config = ConfigParser.RawConfigParser()
-    config.read(get_config_path(config_file))
-    return config.get(section, config_key)
+    try:
+        config.read(get_config_path(config_file))
+        config_value = config.get(section, config_key)
+    except:
+        raise Exception("Cannot read configuration file or key")
+    return config_value
 
 def save_config(config_key, config_value, config_file="config.ini"):
     config = ConfigParser.RawConfigParser()
