@@ -38,7 +38,7 @@ def send_prowl(description, application="Alfred", event="event", priority=0):
     try:
         apikey = get_api_key()
     except:
-        raise.Exception "No APIKEY. Please configure by holding down the cmd key and pasting in prowl APIKEY."
+        raise Exception("No APIKEY. Please configure by holding down the cmd key and pasting in prowl APIKEY.")
     parameters = {'apikey': apikey, 'event': event, 'application': application,
                   'priority': priority, 'description': description}
     r = requests.post(PROWL_URL + "add", params=parameters)
