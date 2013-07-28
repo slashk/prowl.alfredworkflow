@@ -13,7 +13,7 @@ This workflow is licensed under the [Apache License, Version 2.0](http://www.apa
 Requirements
 ------------
 
-This workflow requires [Alfred 2 and the Powerpack](http://www.alfredapp.com/powerpack/) and [Prowl](http://www.prowlapp.com/).
+This workflow requires [Alfred 2 and the Powerpack](http://www.alfredapp.com/powerpack/) plus [Prowl](http://www.prowlapp.com/).
 
 Code Structure
 --------------
