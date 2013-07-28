@@ -1,7 +1,7 @@
 Alfred 2 Workflow for Prowl
 ====================
 
-This [Alfred 2 workflow](http://www.alfredapp.com/) allow you to send Prowl alerts to your mobile phone. 
+This [Alfred 2 workflow](http://www.alfredapp.com/) allow you to send [Prowl](http://www.prowlapp.com/) alerts to your mobile phone. 
 
 For information on how to install and use this workflow, please visit the [Prowl for Alfred](http://ken.pepple.info/prowl.alfredworkflow) homepage.
 
@@ -28,20 +28,19 @@ Configuration Files
 
 There is a single configuration file:
 
-* config.ini
+* `config.ini` which is located in `~/Library/Application\ Support/Alfred\ 2/Workflow\ Data/info.pepple.prowl/config.ini`
 
 This file follows the standard ini format. The only option is "apikey". A sample would look like this:
 
 ```ini
 [defaults]
-apikey = b57501d2e56cfd64316153da47355283db4752fc
-
+apikey = b59991d2e56cfd64216153da47355283db4999fc
 ```
 
-This shouldn't be set by hand - rather the cmd modifier will set it for you.
+This shouldn't be set by hand - rather the cmd modifier option will set it for you.
 
 Alleyoop Support
 ----------------
 
-This workflow supports [Alleyoop](http://alfred.daniel.sh/oopdev.html) through its remote.json and update.json files. 
+This workflow supports [Alleyoop](http://alfred.daniel.sh/oopdev.html) through its `remote.json` and `update.json` files. 
 
