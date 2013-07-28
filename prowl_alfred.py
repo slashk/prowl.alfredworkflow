@@ -1,4 +1,4 @@
-import keyutils as utils
+import alfred_utils as utils
 import requests
 
 PROWL_URL = "https://api.prowlapp.com/publicapi/"
