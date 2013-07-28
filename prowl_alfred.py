@@ -18,13 +18,20 @@ import alfred_utils as utils
 import requests
 
 PROWL_URL = "https://api.prowlapp.com/publicapi/"
-
+DEFAULT_PRIORITY = 0
+VALID_PRIORITIES = [-2, -1, 0, 1, 2]
 
 def get_api_key():
     return utils.get_config('apikey')
 
 def get_priority_key():
-    return utils.get_config('priority')
+    try:
+        p = utils.get_config('priority')
+        if p not in VALID_PRIORITIES:
+            p = DEFAULT_PRIORITY
+    except:
+        p = DEFAULT_PRIORITY
+    return p
 
 def verify_apikey(apikey):
     parameters = {'apikey': apikey}
